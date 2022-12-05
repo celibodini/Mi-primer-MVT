@@ -1,5 +1,4 @@
-"""miprimermvt URL Configuration
-
+"""proyecto URL Configuration
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
@@ -15,7 +14,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from ejemplo.views import index, saludar_a
+from ejemplo.views import sumar
+from ejemplo.views import buscar, mostrar_familiares
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('saludar/', index),
+    path('saludar_a/<nombre>/', saludar_a),
+    path('sumar/<int:a>/<int:b>/', sumar),
+    path('buscar/', buscar),
+    path('mi-familia/', mostrar_familiares),
 ]
