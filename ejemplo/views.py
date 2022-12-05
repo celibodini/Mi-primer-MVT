@@ -33,4 +33,5 @@ def buscar(request):
 
 def mostrar_familiares(request):
     lista_familiares = Familiar.objects.all()
-    return render(request, "ejemplo/familiares.html", {"lista_familiares": lista_familiares})
+    return render(request, "familiares.html", {"lista_familiares": lista_familiares})
+    
